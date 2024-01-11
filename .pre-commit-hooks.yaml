@@ -1,7 +1,7 @@
 -   id: kustomize
     name: kustomize (via docker)
     description: kustomize provided by docker
-    entry: kustomize
+    entry: kustomize build
     language: system
     args: []
     always_run: true
