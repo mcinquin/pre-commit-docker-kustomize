@@ -1,8 +1,17 @@
 -   id: kustomize
-    name: kustomize (via docker)
-    description: kustomize provided by docker
+    name: kustomize
+    description: kustomize
     entry: kustomize build
     language: system
+    args: []
+    always_run: true
+    pass_filenames: false
+    
+-   id: docker-kustomize
+    name: kustomize (via container)
+    description: kustomize provided by a container
+    entry: registry.k8s.io/kustomize/kustomize:v5.0.0 build
+    language: docker_image
     args: []
     always_run: true
     pass_filenames: false
