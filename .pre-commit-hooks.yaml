@@ -1,17 +1,27 @@
--   id: kustomize
-    name: kustomize
-    description: kustomize
-    entry: kustomize build
-    language: system
-    args: []
-    always_run: true
-    pass_filenames: false
-    
--   id: docker-kustomize
-    name: kustomize (via container)
-    description: kustomize provided by a container
-    entry: registry.k8s.io/kustomize/kustomize:v5.0.0 build
-    language: docker_image
-    args: []
-    always_run: true
-    pass_filenames: false
+- id: kustomize
+  name: kustomize
+  description: kustomize
+  entry: kustomize build
+  language: system
+  args: []
+
+- id: helm-lint
+  name: helm-lint
+  description: helm-lint
+  entry: helm lint
+  language: system
+  args: []
+
+- id: helm-template
+  name: helm-template
+  description: helm-template
+  entry: helm template
+  language: system
+  args: []
+
+- id: helm-install
+  name: helm-install
+  description: helm-install
+  entry: helm install
+  language: system
+  args: ["--dry-run=client"]
