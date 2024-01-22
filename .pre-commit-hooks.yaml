@@ -4,6 +4,8 @@
   entry: kustomize build
   language: system
   args: []
+  always_run: true
+  pass_filenames: false
 
 - id: helm-lint
   name: helm-lint
@@ -11,6 +13,8 @@
   entry: helm lint
   language: system
   args: []
+  always_run: true
+  pass_filenames: false
 
 - id: helm-template
   name: helm-template
@@ -18,6 +22,8 @@
   entry: helm template
   language: system
   args: []
+  always_run: true
+  pass_filenames: false
 
 - id: helm-install
   name: helm-install
@@ -25,3 +31,5 @@
   entry: helm install
   language: system
   args: ["--dry-run=client"]
+  always_run: true
+  pass_filenames: false
